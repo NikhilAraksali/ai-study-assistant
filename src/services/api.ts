@@ -245,13 +245,23 @@ export const api = {
     fetchApi<{ success: boolean }>(`/api/notifications/${notificationId}/read`, { method: 'POST' }),
 
   // PDF AI Features
-  askPdfAi: (topicId: string, messages: Array<{ role: 'user' | 'model'; content: string }>, signal?: AbortSignal) =>
-    fetchApi<{ reply: string }>('/api/ai/pdf/chat', { method: 'POST', body: JSON.stringify({ topicId, messages }), signal }),
+  askPdfAi: (
+    topicId: string,
+    messages: Array<{ role: 'user' | 'model'; content: string }>,
+    extra?: { pdfText?: string; topicTitle?: string; topicContent?: string },
+    signal?: AbortSignal
+  ) =>
+    fetchApi<{ reply: string }>('/api/ai/pdf/chat', {
+      method: 'POST',
+      body: JSON.stringify({ topicId, messages, ...extra }),
+      signal
+    }),
 
   streamPdfAi: async (
     topicId: string,
     messages: Array<{ role: 'user' | 'model'; content: string }>,
     onChunk: (chunk: string) => void,
+    extra?: { pdfText?: string; topicTitle?: string; topicContent?: string },
     signal?: AbortSignal
   ): Promise<string> => {
     try {
@@ -266,12 +276,12 @@ export const api = {
       const res = await fetch('/api/ai/pdf/chat/stream', {
         method: 'POST',
         headers,
-        body: JSON.stringify({ topicId, messages }),
+        body: JSON.stringify({ topicId, messages, ...extra }),
         signal
       });
 
       if (!res.ok || !res.body) {
-        const fallback = await api.askPdfAi(topicId, messages, signal);
+        const fallback = await api.askPdfAi(topicId, messages, extra, signal);
         onChunk(fallback.reply);
         return fallback.reply;
       }
@@ -307,13 +317,13 @@ export const api = {
       }
 
       if (fullText) return fullText;
-      const fallback = await api.askPdfAi(topicId, messages, signal);
+      const fallback = await api.askPdfAi(topicId, messages, extra, signal);
       onChunk(fallback.reply);
       return fallback.reply;
     } catch (err: any) {
       if (err.name === 'AbortError') throw err;
       console.warn('PDF stream failed, falling back to direct AI endpoint:', err);
-      const fallback = await api.askPdfAi(topicId, messages, signal);
+      const fallback = await api.askPdfAi(topicId, messages, extra, signal);
       onChunk(fallback.reply);
       return fallback.reply;
     }

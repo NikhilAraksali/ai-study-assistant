@@ -31,6 +31,7 @@ export const PdfAiStudyModal: React.FC<PdfAiStudyModalProps> = ({ topic, onClose
   const [docViewType, setDocViewType] = useState<'pdf' | 'text'>('pdf');
 
   // PDF Chat State
+  const [deliveryMode, setDeliveryMode] = useState<'stream' | 'direct'>('direct');
   const [chatMessages, setChatMessages] = useState<Array<{ role: 'user' | 'model'; content: string }>>([]);
   const [chatInput, setChatInput] = useState('');
   const [chatLoading, setChatLoading] = useState(false);
@@ -75,9 +76,9 @@ export const PdfAiStudyModal: React.FC<PdfAiStudyModalProps> = ({ topic, onClose
     }
   };
 
-  const handleSendChatMessage = async (e: React.FormEvent) => {
-    e.preventDefault();
-    const query = chatInput.trim();
+  const handleSendChatMessage = async (e?: React.FormEvent, customQuery?: string) => {
+    if (e) e.preventDefault();
+    const query = (customQuery || chatInput).trim();
     if (!query || chatLoading) return;
 
     setChatError(null);
@@ -90,41 +91,82 @@ export const PdfAiStudyModal: React.FC<PdfAiStudyModalProps> = ({ topic, onClose
     const modelMsgIndex = newHistory.length;
     setChatMessages([...newHistory, { role: 'model', content: '' }]);
 
+    const extraContext = {
+      pdfText: (topic as any).pdfText || topic.content || topic.title,
+      topicTitle: topic.title,
+      topicContent: topic.content
+    };
+
     try {
-      let accumulated = '';
-      await api.streamPdfAi(
-        topic.id,
-        newHistory,
-        chunk => {
-          accumulated += chunk;
+      if (deliveryMode === 'direct') {
+        const directRes = await api.askPdfAi(topic.id, newHistory, extraContext);
+        setChatMessages(prev => {
+          const next = [...prev];
+          if (next[modelMsgIndex]) {
+            next[modelMsgIndex] = {
+              role: 'model',
+              content: directRes.reply || "I've reviewed the study material. Ask anything about formulas, theorems, or definitions."
+            };
+          }
+          return next;
+        });
+      } else {
+        // Stream mode with automatic direct fallback
+        let accumulated = '';
+        await api.streamPdfAi(
+          topic.id,
+          newHistory,
+          chunk => {
+            accumulated += chunk;
+            setChatMessages(prev => {
+              const next = [...prev];
+              if (next[modelMsgIndex]) {
+                next[modelMsgIndex] = { role: 'model', content: accumulated };
+              }
+              return next;
+            });
+          },
+          extraContext
+        );
+
+        if (!accumulated.trim()) {
+          const fallback = await api.askPdfAi(topic.id, newHistory, extraContext);
           setChatMessages(prev => {
             const next = [...prev];
             if (next[modelMsgIndex]) {
-              next[modelMsgIndex] = { role: 'model', content: accumulated };
+              next[modelMsgIndex] = {
+                role: 'model',
+                content: fallback.reply || "I've reviewed the study material. Ask anything about formulas, theorems, or definitions."
+              };
             }
             return next;
           });
         }
-      );
-
-      if (!accumulated.trim()) {
+      }
+    } catch (err: any) {
+      console.warn('PDF chat primary attempt failed, trying direct fallback:', err);
+      try {
+        const directFallback = await api.askPdfAi(topic.id, newHistory, extraContext);
         setChatMessages(prev => {
           const next = [...prev];
           if (next[modelMsgIndex]) {
-            next[modelMsgIndex] = { role: 'model', content: "I've reviewed the PDF document. Let me know what specific section you'd like me to explain." };
+            next[modelMsgIndex] = {
+              role: 'model',
+              content: directFallback.reply || "I've reviewed the document."
+            };
+          }
+          return next;
+        });
+      } catch (fallbackErr: any) {
+        setChatError(fallbackErr.message || 'Failed to get answer from PDF');
+        setChatMessages(prev => {
+          const next = [...prev];
+          if (next[modelMsgIndex]) {
+            next[modelMsgIndex] = { role: 'model', content: `⚠️ Error: ${fallbackErr.message || 'Could not process PDF context.'}` };
           }
           return next;
         });
       }
-    } catch (err: any) {
-      setChatError(err.message || 'Failed to get answer from PDF');
-      setChatMessages(prev => {
-        const next = [...prev];
-        if (next[modelMsgIndex]) {
-          next[modelMsgIndex] = { role: 'model', content: `⚠️ Error: ${err.message || 'Could not process PDF context.'}` };
-        }
-        return next;
-      });
     } finally {
       setChatLoading(false);
     }
@@ -354,20 +396,76 @@ export const PdfAiStudyModal: React.FC<PdfAiStudyModalProps> = ({ topic, onClose
 
           {/* MODE 2: ASK AI ABOUT THIS PDF */}
           {activeMode === 'chat' && (
-            <div className="h-full flex flex-col justify-between space-y-4">
+            <div className="h-full flex flex-col justify-between space-y-3">
+              {/* Chat Controls Subheader */}
+              <div className="flex items-center justify-between px-1 py-1 text-xs border-b border-[#242428]/60 pb-2">
+                <div className="flex items-center space-x-1.5 text-[#71717A]">
+                  <Bot className="w-3.5 h-3.5 text-[#5B8CFF]" />
+                  <span className="font-mono text-[11px] text-[#A1A1AA]">PDF AI Grounded Assistant</span>
+                </div>
+                <div className="flex items-center space-x-1 bg-[#111113] p-0.5 rounded-lg border border-[#242428]">
+                  <button
+                    type="button"
+                    onClick={() => setDeliveryMode('direct')}
+                    className={`px-2.5 py-1 rounded text-[10px] font-mono transition flex items-center space-x-1 ${
+                      deliveryMode === 'direct'
+                        ? 'bg-[#5B8CFF] text-white font-semibold shadow-sm'
+                        : 'text-[#71717A] hover:text-[#F5F5F5]'
+                    }`}
+                    title="Instant direct response (Recommended for stable previews)"
+                  >
+                    <span>⚡ Buffered Answer</span>
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setDeliveryMode('stream')}
+                    className={`px-2.5 py-1 rounded text-[10px] font-mono transition flex items-center space-x-1 ${
+                      deliveryMode === 'stream'
+                        ? 'bg-[#5B8CFF] text-white font-semibold shadow-sm'
+                        : 'text-[#71717A] hover:text-[#F5F5F5]'
+                    }`}
+                    title="Real-time text streaming"
+                  >
+                    <span>🌊 Live Stream</span>
+                  </button>
+                </div>
+              </div>
+
               {chatError && (
                 <div className="p-3 bg-[#F47C7C]/10 border border-[#F47C7C]/30 text-[#F47C7C] text-xs rounded-xl">
                   {chatError}
                 </div>
               )}
+              
               <div className="flex-1 overflow-y-auto space-y-3 pr-2">
                 {chatMessages.length === 0 ? (
-                  <div className="p-6 rounded-xl bg-[#111113] border border-[#242428] text-center space-y-3 my-8">
+                  <div className="p-6 rounded-xl bg-[#111113] border border-[#242428] text-center space-y-3 my-4">
                     <Sparkles className="w-8 h-8 mx-auto text-[#5B8CFF]" />
                     <h3 className="text-base font-semibold text-[#F5F5F5]">Ask Questions Grounded in this PDF</h3>
                     <p className="text-xs text-[#71717A] max-w-md mx-auto">
                       Our AI has indexed the contents of "{topic.title}". Ask anything about formulas, theorems, definitions, or summaries!
                     </p>
+
+                    <div className="pt-2 flex flex-wrap gap-2 justify-center">
+                      <button
+                        onClick={() => handleSendChatMessage(undefined, "Summarize the core takeaways of this topic")}
+                        className="px-3 py-1.5 rounded-lg bg-[#18181B] hover:bg-[#242428] border border-[#242428] text-[11px] text-[#A1A1AA] hover:text-[#F5F5F5] transition"
+                      >
+                        💡 Summarize Key Takeaways
+                      </button>
+                      <button
+                        onClick={() => handleSendChatMessage(undefined, "What are the most important terms and definitions to know for the exam?")}
+                        className="px-3 py-1.5 rounded-lg bg-[#18181B] hover:bg-[#242428] border border-[#242428] text-[11px] text-[#A1A1AA] hover:text-[#F5F5F5] transition"
+                      >
+                        📖 Core Terms & Definitions
+                      </button>
+                      <button
+                        onClick={() => handleSendChatMessage(undefined, "Give me 3 practice questions with answers based on this material")}
+                        className="px-3 py-1.5 rounded-lg bg-[#18181B] hover:bg-[#242428] border border-[#242428] text-[11px] text-[#A1A1AA] hover:text-[#F5F5F5] transition"
+                      >
+                        🎯 Practice Questions
+                      </button>
+                    </div>
                   </div>
                 ) : (
                   chatMessages.map((msg, idx) => (
@@ -388,13 +486,14 @@ export const PdfAiStudyModal: React.FC<PdfAiStudyModalProps> = ({ topic, onClose
                   ))
                 )}
                 {chatLoading && (
-                  <div className="text-xs text-[#71717A] font-mono italic animate-pulse">
-                    ScholarAI is reading PDF and generating answer...
+                  <div className="text-xs text-[#71717A] font-mono italic animate-pulse flex items-center space-x-2 p-2">
+                    <Sparkles className="w-3.5 h-3.5 text-[#5B8CFF] animate-spin" />
+                    <span>ScholarAI is analyzing document and generating answer...</span>
                   </div>
                 )}
               </div>
 
-              <form onSubmit={handleSendChatMessage} className="flex space-x-2 pt-2">
+              <form onSubmit={e => handleSendChatMessage(e)} className="flex space-x-2 pt-2">
                 <input
                   type="text"
                   placeholder="Ask a question about this PDF..."

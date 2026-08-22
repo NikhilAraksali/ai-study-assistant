@@ -1278,18 +1278,17 @@ app.post('/api/ai/analyze-material', async (req, res) => {
 app.post('/api/ai/pdf/chat', async (req, res) => {
   const user = getUserOrFallback(req);
 
-  const { topicId, messages } = req.body;
-  if (!topicId || !messages || !Array.isArray(messages)) {
-    return res.status(400).json({ error: 'Topic ID and messages array are required' });
+  const { topicId, messages, pdfText: directPdfText, topicTitle, topicContent } = req.body;
+  if (!messages || !Array.isArray(messages)) {
+    return res.status(400).json({ error: 'Messages array is required' });
   }
 
   const data = db.get();
-  const topic = data.topics.find(t => t.id === topicId);
-  if (!topic) return res.status(404).json({ error: 'PDF topic not found' });
+  const topic = data.topics.find(t => t.id === topicId || t.id?.toLowerCase() === (topicId || '').toLowerCase());
+  const resolvedPdfText = (topic as any)?.pdfText || topic?.content || topic?.title || directPdfText || topicContent || topicTitle || 'Course Study Document';
 
   try {
-    const pdfText = (topic as any).pdfText || topic.content || topic.title;
-    const reply = await askPdfQuestion({ pdfText, messages });
+    const reply = await askPdfQuestion({ pdfText: resolvedPdfText, messages });
 
     setImmediate(() => {
       try {
@@ -1313,14 +1312,14 @@ app.post('/api/ai/pdf/chat', async (req, res) => {
 app.post('/api/ai/pdf/chat/stream', async (req, res) => {
   const user = getUserOrFallback(req);
 
-  const { topicId, messages } = req.body;
-  if (!topicId || !messages || !Array.isArray(messages)) {
-    return res.status(400).json({ error: 'Topic ID and messages array are required' });
+  const { topicId, messages, pdfText: directPdfText, topicTitle, topicContent } = req.body;
+  if (!messages || !Array.isArray(messages)) {
+    return res.status(400).json({ error: 'Messages array is required' });
   }
 
   const data = db.get();
-  const topic = data.topics.find(t => t.id === topicId);
-  if (!topic) return res.status(404).json({ error: 'PDF topic not found' });
+  const topic = data.topics.find(t => t.id === topicId || t.id?.toLowerCase() === (topicId || '').toLowerCase());
+  const resolvedPdfText = (topic as any)?.pdfText || topic?.content || topic?.title || directPdfText || topicContent || topicTitle || 'Course Study Document';
 
   res.setHeader('Content-Type', 'text/event-stream; charset=utf-8');
   res.setHeader('Cache-Control', 'no-cache, no-transform');
@@ -1335,8 +1334,7 @@ app.post('/api/ai/pdf/chat/stream', async (req, res) => {
   });
 
   try {
-    const pdfText = (topic as any).pdfText || topic.content || topic.title;
-    const stream = askPdfQuestionStream({ pdfText, messages });
+    const stream = askPdfQuestionStream({ pdfText: resolvedPdfText, messages });
 
     for await (const chunk of stream) {
       if (isClosed) break;

@@ -1,0 +1,772 @@
+{
+  "users": [
+    {
+      "id": "usr_admin",
+      "name": "System Administrator",
+      "email": "admin@study.ai",
+      "role": "admin",
+      "createdAt": "2026-08-14T04:15:50.681Z"
+    },
+    {
+      "id": "usr_teacher_1",
+      "name": "Prof. Sarah Jenkins",
+      "email": "teacher@study.ai",
+      "role": "teacher",
+      "createdAt": "2026-08-14T04:15:50.682Z"
+    },
+    {
+      "id": "usr_student_1",
+      "name": "Alex Johnson",
+      "email": "student@study.ai",
+      "role": "student",
+      "createdAt": "2026-08-14T04:15:50.682Z"
+    },
+    {
+      "id": "usr_iimhzlx_mssfqs3g",
+      "name": "jalaja",
+      "email": "jal@gmail.com",
+      "role": "teacher",
+      "createdAt": "2026-08-14T04:16:52.156Z"
+    },
+    {
+      "id": "usr_v3htjw3_mssftlye",
+      "name": "saket",
+      "email": "sak@gmail.com",
+      "role": "student",
+      "createdAt": "2026-08-14T04:19:04.166Z"
+    },
+    {
+      "id": "usr_mt8zhja_mt2rm7tb",
+      "name": "nikhiladmin",
+      "email": "nikhiladmin@gmail.com",
+      "role": "admin",
+      "createdAt": "2026-08-21T09:46:56.399Z"
+    },
+    {
+      "id": "usr_5kdoq6l_mt2ryzo4",
+      "name": "nikhil",
+      "email": "nikhilaraksali@gmail.com",
+      "role": "student",
+      "createdAt": "2026-08-21T09:56:52.372Z"
+    },
+    {
+      "id": "usr_04l5ydm_mt330w6e",
+      "name": "j",
+      "email": "j@gmail.com",
+      "role": "admin",
+      "createdAt": "2026-08-21T15:06:16.934Z"
+    },
+    {
+      "id": "usr_lky6pc1_mt33g3sg",
+      "name": "pran",
+      "email": "pran@gmail.com",
+      "role": "teacher",
+      "createdAt": "2026-08-21T15:18:06.640Z"
+    },
+    {
+      "id": "usr_1m00j30_mt34b56n",
+      "name": "js",
+      "email": "js@gmail.com",
+      "role": "student",
+      "createdAt": "2026-08-21T15:42:14.783Z"
+    }
+  ],
+  "classrooms": [
+    {
+      "id": "cls_101",
+      "code": "PYT72K",
+      "name": "AP Computer Science & Python",
+      "description": "Master core programming concepts, algorithms, and data structures.",
+      "teacherId": "usr_teacher_1",
+      "teacherName": "Prof. Sarah Jenkins",
+      "createdAt": "2026-08-14T04:15:50.682Z"
+    },
+    {
+      "id": "cls_rppjqsg_mssfrctr",
+      "code": "SE79RP",
+      "name": "C Prgm",
+      "description": "BCA 5 b\n",
+      "teacherId": "usr_iimhzlx_mssfqs3g",
+      "teacherName": "jalaja",
+      "createdAt": "2026-08-14T04:17:19.023Z"
+    },
+    {
+      "id": "cls_nievh34_mt33h39o",
+      "code": "LK7LAV",
+      "name": "dbms",
+      "description": "5 b",
+      "teacherId": "usr_lky6pc1_mt33g3sg",
+      "teacherName": "pran",
+      "createdAt": "2026-08-21T15:18:52.620Z"
+    }
+  ],
+  "enrollments": [
+    {
+      "id": "enr_m9w2ire_mssfw4ib",
+      "classroomId": "cls_rppjqsg_mssfrctr",
+      "studentId": "usr_v3htjw3_mssftlye",
+      "studentName": "saket",
+      "studentEmail": "sak@gmail.com",
+      "joinedAt": "2026-08-14T04:21:01.523Z"
+    },
+    {
+      "id": "enr_46wsbk3_mt33n6il",
+      "classroomId": "cls_nievh34_mt33h39o",
+      "studentId": "usr_5kdoq6l_mt2ryzo4",
+      "studentName": "nikhil",
+      "studentEmail": "nikhilaraksali@gmail.com",
+      "joinedAt": "2026-08-21T15:23:36.765Z"
+    },
+    {
+      "id": "enr_p1f6bxi_mt35isyl",
+      "classroomId": "cls_nievh34_mt33h39o",
+      "studentId": "usr_1m00j30_mt34b56n",
+      "studentName": "js",
+      "studentEmail": "js@gmail.com",
+      "joinedAt": "2026-08-21T16:16:11.805Z"
+    }
+  ],
+  "topics": [
+    {
+      "id": "top_tmpoyoc_mt3lqdhp",
+      "classroomId": "cls_nievh34_mt33h39o",
+      "teacherId": "usr_lky6pc1_mt33g3sg",
+      "teacherName": "pran",
+      "title": "Wcms",
+      "content": "Classroom study material attached below.",
+      "attachmentUrl": "/uploads/file_ucrckar_mt3lq9ly_wcms_u1.pdf",
+      "attachmentName": "wcms u1.pdf",
+      "pdfFileName": "wcms u1.pdf",
+      "pdfText": "Web Content Management System\nUNIT-1\nWEB CONTENT MANAGEMENT SYSTEM\nWeb content development and management are essential aspects of creating, maintaining, and optimizing a successful\nonline presence. In today's digital age, businesses, organizations, and individuals rely on websites and online\nplatforms to connect with their target audiences, share information, and promote their products or services.\nThis introduction will provide an overview of web content development and management, outlining their key\nconcepts and components.\nWeb Content Development:\n1. Definition: Web content development refers to the process of creating and producing content for websites and\nonline platforms. This content can take various forms, including text, images, videos, audio, and interactive elements.\n2. Content Strategy: Developing a content strategy is the first step in web content development. It involves defining\nyour target audience, identifying your goals and objectives, and determining the type of content that will resonate\nwith your audience and achieve your objectives.\n3. Content Creation: Content creation encompasses the actual generation of web content. This includes writing\narticles, producing videos, designing graphics, and developing interactive features. Content creators need to ensure\nthat their content is high-quality, engaging, and aligned with their content strategy\n4. Search Engine Optimization (SEO): SEO is a crucial aspect of web content development. It involves optimizing\nyour content to improve its visibility on search engines like Google. This includes using relevant keywords, creating\nquality backlinks, and optimizing on-page elements like titles and meta descriptions.\n5. Content Management Systems (CMS): Many websites use Content Management Systems like WordPress,\nDrupal, or Joomla to create, edit, and organize their content. These platforms make it easier to manage and update\nweb content without extensive technical knowledge.\nWeb Content Management:\n1. Definition: Web content management refers to the ongoing process of organizing, updating, and maintaining the\ncontent on a website or online platform. It involves ensuring that the content remains relevant, accurate, and upto\ndate.\n2. Content Editing and Publishing: Content management includes editing and publishing new content as well as\nmaking updates to existing content. This ensures that the information presented on the website is accurate and reflects\nthe latest developments.\n3. Content Governance: Content governance involves establishing rules and guidelines for content creation and\nmanagement. It includes content approval processes, version control, and content ownership to maintain consistency\nand quality.\n4. User Experience (UX): Managing web content also involves optimizing the user experience. This includes\nensuring that the website is user-friendly, easy to navigate, and accessible to all users, including those with\ndisabilities.\n5. Performance Monitoring: Web content managers often monitor the performance of the content to assess its\nimpact. This may involve tracking user engagement, analysing website traffic, and making data-driven decisions to\nimprove content effectiveness\n\n-- 1 of 10 --\n\nWeb Content Management System\n6. Security: Protecting web content from security threats is paramount. Content managers need to implement security\nmeasures to safeguard against hacking, data breaches, and other online vulnerabilities.\nIn summary, web content development and management are integral components of maintaining a successful online\npresence. Developing a well-defined content strategy, creating high-quality content, optimizing for search engines,\nand effectively managing and maintaining that content are all critical for engaging your audience and achieving your\nonline objectives. As the digital and scape evolves, staying current with best practices and technologies in web\ncontent development and management is essential for long-term success.\nFeatures of web content management system\nA Web Content Management System (CMS) is a software platform that enables users to create, edit, organize, and\npublish digital content on websites or other online platforms without the need for extensive technical knowledge.\nCMS platforms offer a wide range of features to streamline the content manage\n:\n1. Content Creation and Editing: CMS platforms provide user-friendly interfaces for creating, editing, and\nformatting content. Users can easily add text, images, videos, and other multimedia elements.\n2. WYSIWYG Editor: A \"What You See Is What You Get\" editor allows users to preview content as it will appear\non the website, making it easier to format and style content.\n3. Content Publishing: CMS platforms offer scheduling options to publish content at specific dates and times,\nallowing for content planning and timely updates.\n4. Version Control: Versioning allows users to track changes made to content overtime. This feature is valuable for\nauditing, reverting to previous versions, and collaborative content creation.\n5. User Roles and Permissions: CMS systems provide role-based access control, allowing administrators to assign\ndifferent levels of access and editing permissions to users. This ensures content security and compliance.\n6. Content Organization: Content can be organized into categories, tags, or folders, making it easier to manage\nlarge volumes of content and improve site navigation.\n7. Media Library: A built-in media library lets users store and manage images, videos, documents, and other assets\nused in content creation. It often includes features for resizing, cropping, and optimizing media.\n8. Responsive Design: Many modern CMS platforms support responsive design, ensuring that content displays\ncorrectly on various devices and screen sizes.\n9. SEO Tools: CMS systems often include SEO-friendly features, such as customizable URLs, metadata fields, and\noptions for optimizing content for search engines.\n10. Search Functionality: Robust search capabilities help users and visitors find content quickly and easily.\n11. Content Workflow: Workflow management tools allow content creators to collaborate, submit content for\napproval, and track the status of content through various stages of production.\n12. Multilingual Support: For websites with a global audience, CMS platforms offer support for multiple languages,\nallowing content to be translated and managed efficiently.\n13. Integration Capabilities: CMS systems can integrate with other software and services, such as e-commerce\nplatforms, analytics tools, marketing automation systems, and social media.\n\n-- 2 of 10 --\n\nWeb Content Management System\n14. Security Features: CMS platforms have security measures to protect against unauthorized access, data breaches,\nand malware. Regular security updates are crucial.\n15. Performance Optimization: Many CMS platforms provide tools to optimize website performance, including\ncaching, content delivery networks (CDNs), and image compression.\n16. Analytics and Reporting: Built-in analytics or integrations with third-party analytics tools allow users to track\nwebsite traffic, user engagement, and other key performance metrics.\n17. Backup and Restore: Automated backup and restore features help prevent data loss and facilitate disaster\nrecovery.\n18. Community and Support: Many CMS platforms have active communities, forums, and support resources to\nassist users with troubleshooting and customization.\n19. Customization and Extensibility: CMS platforms often support plugins, themes, and custom development,\nallowing users to tailor their websites to their specific needs.\n20. Scalability: A CMS should be able to handle growing amounts of content and traffic, making it suitable for small\nblogs and large enterprise websites alike.\nThese features collectively make web content management systems powerful tools for individuals, businesses, and\norganizations to create, maintain, and optimize their online presence effectively. While web content management\nsystems (CMS) offer numerous advantages, they also come with some potential disadvantages and challenges.\nIt's essential to be aware of these drawbacks when considering the use of a CMS for your website or online platform\n:\nDrawbacks of Web content management system\nWhile web content management systems (CMS) offer numerous advantages, they also come with some potential\ndisadvantages and challenges. It's essential to be aware of these drawbacks when considering the use of a CMS for\nyour website or online platform:\n1. Learning Curve: Despite being designed for ease of use, some CMS platform scan still have a learning curve,\nespecially for users who are not familiar with web development or content management systems. Understanding the\nCMS interface and features may take time.\n2. Limited Customization: While CMS platforms offer customization options, they may have limitations when\ncompared to fully custom-coded websites. Highly unique or complex design and functionality requirements may be\nchallenging to achieve within the constraints of a CMS\n3. Performance Overhead: CMS platforms can introduce performance overhead, particularly if they use many\nplugins or have complex themes. This can lead to slower loading times, which can negatively impact user experience\nand SEO rankings.\n4. Security Risks: CMS platforms are frequent targets for hackers because of their popularity. To maintain security,\nusers must regularly update the CMS, plugins, and themes. Failure to do so can expose the website to security\nvulnerabilities.\n5. Plugin and Theme Quality: Not all plugins and themes available for CMS platforms are of high quality. Installing\npoorly coded or outdated plugins can lead to compatibility issues, security vulnerabilities, and website crashes.6.\nCosts: While many CMS platforms are open-source and free to use, there can be costs associated with custom themes,\npremium plugins, hosting, and on going maintenance. For businesses with complex needs, these expenses can add\nup.\n\n-- 3 of 10 --\n\nWeb Content Management System\n7. Content Lock-In: Switching from one CMS to another can be challenging due to content lock-in. Migrating\ncontent and data can be time-consuming and may require technical expertise.\n8. Dependency on Updates: CMS platforms require regular updates to fix bugs, add features, and enhance security.\nHowever, updating can sometimes break existing themes or plugins, necessitating additional work to maintain\nwebsite functionality.\n9. Bloat: Over time, CMS installations can accumulate unnecessary code and data, leading to bloat. This can affect\nwebsite performance and make maintenance more challenging.\n10. Complexity for Large Websites: While CMS platforms are suitable for small to medium-sized websites,\nmanaging extremely large or complex websites may become cumbersome due to performance and organization\nissues.\n11. Lack of Unique Features: Some CMS platforms may not offer specific features or functionality that your website\nrequires without extensive customization or development work.\n12. Search Engine Optimization (SEO) Challenges: Although CMS platforms provide SEO tools, improper setup\nor usage can result in suboptimal SEO performance. Users must understand SEO best practices to maximize search\nvisibility effectively.\n13. Updates and Compatibility: CMS updates may not always be compatible with older themes or plugins,\nnecessitating theme and plugin updates or replacements, which can be time-consuming and costly.\n14. Support and Documentation: The quality and availability of support and documentation can vary between CMS\nplatforms. Some may have robust communities and resources, while others may lack comprehensive support.\n15. Content Duplication: Users may inadvertently create duplicate content, negatively impacting SEO and user\nexperience.\n16. Performance Scaling: Scaling a website to handle high traffic can be challenging with some CMS platforms,\nnecessitating advanced hosting solutions and optimizations.\n17. Accessibility Compliance: Achieving and maintaining accessibility compliance can be challenging in CMS\nplatforms, requiring additional effort and expertise.\nTo mitigate these disadvantages, it's crucial to carefully select a CMS that aligns with your specific needs, conduct\nthorough research, and regularly maintain and update your website. Additionally, consider working with experienced\nweb developers and designers who are knowledgeable about your chosen CMS to address potential challenges\neffectively.\nContent types and formats\nContent formats refer to the different ways in which information, ideas, and messages are presented to your audience.\nEach format has its own unique characteristics, advantages, and ways of engaging with the audience. Content formats\nplay a crucial role in diversifying your content strategy and catering to various preferences and consumption habits\nof your audience.\nContent marketing is the process of creating and distributing valuable and relevant content to attract and retain a\nspecific audience and, ultimately, to drive profitable customer action.\nWhy are they Important?\n Choosing the right format for your content marketing strategy is essential to maximize effectiveness.\n Cater to diverse audience preferences and learning styles.\n\n-- 4 of 10 --\n\nWeb Content Management System\n Increase engagement by presenting content in different ways.\n Maximize reach by distributing content across various platforms.\n Enhance storytelling and communication of complex ideas.\n Improve SEO and organic search visibility.\n Create opportunities for repurposing content and extending its lifespan.\nHere are some common content types and formats:\n1. Textual Content:-\n Articles and Blog Posts: Written content in the form of articles and blog posts that provide information,\nopinions, or stories. It allows for in-depth exploration of topics, helps establish expertise, and improves\nSEO by targeting specific keywords. Blog posts have a longer lifespan, continuing to attract traffic and\nprovide value to your audience over time. Blog posts can be shared on various social platforms, such as\nTwitter, Facebook, and LinkedIn, and get more eyes on your content.\n News Stories: Reporting on current events or developments in a concise and factual manner.\n eBooks and Whitepapers: Longer, in-depth written works. Are digital documents that provide detailed\ninformation about a specific topic. They are often used as part of content marketing strategies to inform\nand educate potential customers.\n Press Releases: Official announcements typically used for public relations and news distribution.\n Social Media Posts: Short and visually engaging content, concise text-based content shared on social\nmedia platforms like Instagram, Twitter, and Facebook. They help build brand presence, engage the\naudience, and drive traffic to your website.\n Emails: Written messages delivered electronically. Regular updates and valuable content sent directly to\nsubscribers' inboxes. They maintain customer relationships and drive traffic to your website, used for\ncommunication and marketing.\n2. Visual Content: Video content has gained immense popularity due to its visual and auditory appeal. It's great\nfor storytelling, tutorials, product demos, and reaching audiences who prefer visual learning.\n Images: Static visuals that can include photographs, illustrations, graphics, and infographics.\n Videos: Moving visuals with audio, used for entertainment, education, marketing, and more.\n Slideshows and Presentations: Sequential visual content often used for educational or business purposes.\n Memes: Humorous or satirical images or videos shared on social media for entertainment and\nengagement.\n GIFs: Short, looping animations often used for reactions and humour.\n Visual Stories: Content created with tools like Instagram Stories or Snapchat that combine images, videos,\nand text in a narrative format.\n3. Audio Content: It can include interviews, testimonials, audiobooks, soundscapes, and more.\n Podcasts: Podcasts are digital Audio recordings files often in a series, covering a wide range of topics and\ngenres. available for streaming or downloading over the internet, enabling you to connect with and captivate\na wider audience in a unique way.\n Music: Audio content created for entertainment, available in various genres.\n Audiobooks: Narrated versions of books for listening instead of reading.\n Sound Effects: Audio clips used to enhance multimedia content, such as videos or games.\n Voice Assistants: Voice-activated content used for tasks like answering questions or controlling devices.\n4. Interactive Content: Is any type of material that conveys its message by encouraging user participation.\n\n-- 5 of 10 --\n\nWeb Content Management System\n Quizzes and Polls: Engaging content that allows users to answer questions or express opinions. Quizzes and\npolls provide participants with immediate feedback, satisfying the need for recognition and validation.\nCompleting a quiz and getting results ratifies one's knowledge or opinion, which, in psychological terms, can\nbe incredibly rewarding.\n Calculators and Tools: Interactive applications that perform specific calculations or provide utility.\n Games: Interactive entertainment content, including video games, mobile games, and browser-based games.\n Surveys and Forms: Tools for collecting data or feedback from users.\n Interactive Infographics: Visual representations of data that users can explore and interact with. Infographics\ncombine text and visuals to convey complex information in a visually appealing and easily digestible manner.\nThey are highly shareable on social media and help simplify data-heavy topics.\n5. Social Media Content: Social media content are messages, images, videos, and other content shared on social\nmedia platforms such as Facebook, Twitter, and Instagram.\n Status Updates: Brief text-based updates shared on social media profiles.\n Images and Videos: Visual content shared on platforms like Instagram, Facebook, and Twitter.\n Stories: Temporary visual content available for a limited time on platforms like Snapchat, Instagram, and\nFacebook.\n Live Streaming: Real-time video broadcasts on platforms like Facebook Live, YouTube Live, and Twitch.\n6. User-Generated Content: Content created by your customers or audience, such as reviews, testimonials, and\nsocial media posts. It builds trust and authenticity around your brand.\n Reviews and Ratings: Feedback and opinions shared by users about products, services, or experiences.\n Comments: Responses and discussions posted by users on articles, blog posts, or social media.\n User-Generated Videos: Content created by users, such as unboxing videos or product reviews on YouTube.\n7. Data and Information Content: Data is a raw and unorganized fact that is required to be processed to make\nit meaningful Where as Information is the refined, processed, and organised representation of raw data.\n Charts and Graphs: Visual representations of data used to convey information.\n Tables: Organized data presented in tabular form.\n Reports: Comprehensive documents presenting research findings, analyses, or insights.\n Databases: Collections of structured data, often searchable and sortable.\n8. Educational Content: Content that is created by educators to engage, inspire and inform their students and\nvalues necessary to achieve the curricular goals.\n Tutorials and How-To Guides: Step-by-step instructions and demonstrations to teach specific skills or tasks.\n Online Courses: Structured educational content delivered online.\n Educational Games: Interactive content designed for learning purposes.\n Study Guides: Summaries and aids for learning and test preparation.\nThese content types and formats cater to different preferences, learning styles, and communication goals. Effective\ncontent strategies often involve using a combination of these formats to engage with a diverse audience and convey\nmessages effectively.\nNorms and guidelines of content development\nCreating content that is effective, engaging, and valuable to your audience requires adherence to certain norms and\nguidelines. These norms and guidelines can vary depending on the type of content you are producing and the platform\nyou are using.\n\n-- 6 of 10 --\n\nWeb Content Management System\nHere are some general principles to keep in mind when developing content:\n1. Understand Your Audience: Before you start creating content, it's crucial to have a deep understanding of your\ntarget audience. What are their interests ,needs, and preferences? Tailor your content to address their specific\nconcerns and interests.\n2. Set Clear Objectives: Define the goals you want to achieve with your content. Are you trying to inform, educate,\nentertain, or persuade? Your objectives will guide the content development process.\n3.Research: Conduct thorough research on the topic you're covering. Ensure your content is accurate, up-to-date,\nand well-informed. Cite credible sources when necessary.\n4. Clarity and Simplicity: Use clear and concise language. Avoid jargon and complex terminology that might\nconfuse your audience. Make your content easy to understand.\n5. Engaging Headlines: Craft compelling headlines that grab the reader's attention and give them a reason to click\nor continue reading. Headlines should be accurate and relevant to the content.\n6. Structure and Organization: Organize your content logically with a clear beginning, middle, and end. Use\nheadings, subheadings, and bullet points to make it scannable. This helps readers find what they're looking for\nquickly.\n7. Visual Elements: Incorporate visuals like images, videos, infographics, and charts to enhance your content's\nappeal and convey information more effectively. Ensure these visuals are relevant and properly credited.\n8. Quality over Quantity: Focus on quality rather than quantity. It's better to have a few pieces of high-quality\ncontent than a lot of mediocre content. Aim for depth and value in your content.\n9. Originality and Plagiarism: Create original content and avoid plagiarism at all costs. If you use someone else's\nwork or ideas, give proper credit through citations and references.\n10. SEO Optimization: If your content is online, optimize it for search engines(SEO) to improve its visibility. Use\nrelevant keywords, meta descriptions, and high-quality backlinks.\n11. Consistency: Maintain a consistent style, tone, and branding across your content. This helps build a recognizable\nand trustworthy brand identity.\n12. Proof reading and Editing: Always proofread and edit your content for grammar, spelling, and formatting\nerrors. Errors can detract from your credibility.\n13. Accessibility: Ensure your content is accessible to all users, including those with disabilities. Use alt text for\nimages, provide transcripts for videos, and use accessible website design practices.\n14. Feedback and Improvement: Be open to feedback from your audience and peers. Use feedback to improve your\ncontent over time.\n15. Legal and Ethical Considerations: Respect copyright laws, privacy rights, and ethical standards when creating\nand publishing content. Be transparent about any conflicts of interest.\n16. Promotion and Distribution: Develop a strategy for promoting and distributing your content to reach your\nintended audience. Utilize social media, email marketing, and other channels as appropriate.\n17. Measure and Analyze: Track the performance of your content using analytics tools. This data can help you\nunderstand what works and what needs improvement.\n18. Adaptability: Stay flexible and adaptable. Content trends and audience preferences change, so be ready to adjust\nyour content strategy accordingly.\n\n-- 7 of 10 --\n\nWeb Content Management System\nRemember that the specific norms and guidelines may vary depending on your industry and the platforms you use.\nAlways stay informed about best practices in content development to ensure your content remains effective and\nrelevant.\nCreating Digital Graphics\nCreating digital graphics involves using software and design tools to generate visual content for various purposes,\nsuch as web design, social media marketing, branding, presentations, and more.\nHere are the steps to create digital graphics:\n1. Define Your Purpose and Audience:- Determine the purpose of your graphic (e.g., promotional, informative,\neducational).- Identify your target audience and their preferences.\n2. Choose the Right Software:- Select graphic design software that suits your needs. Some popular options include\nAdobe Photoshop, Adobe Illustrator, Canva, GIMP (free), and Inkscape(free).\n3. Set Canvas or Artboard Size:- Create a new document with the appropriate dimensions for your graphic.\nConsider the platform where the graphic will be used (e.g., social media, website, print).\n4. Select Color Palette:- Choose a color scheme that aligns with your brand or the theme of your graphic. Use tools\nlike Adobe Color Wheel or coolors.co to create harmonious color palettes.\n5. Typography:- Select fonts that are readable and complement your design. Typically, it's best to use two to three\nfonts for consistency.\n6. Create or Import Graphics:- Depending on your needs, you can create graphics from scratch using drawing tools\nor import existing images, icons, or illustrations.\n7. Layout and Composition:- Plan the layout of your graphic. Ensure that elements are organized logically and that\nthere is enough white space.- Use grids and alignment tools to maintain consistency.\n8. Add Text:- Incorporate text elements, including headings, subheadings, body text, and captions.- Adjust font size,\nstyle, color, and spacing for readability and visual appeal.\n9. Enhance with Visual Effects:- Apply effects like shadows, gradients, and transparency to add depth and\ndimension to your graphic.\n10. Use Layers : - Work with layers to separate and manage different elements of your graphic. This allows for easy\nediting and organization.\n11. Illustrations and Icons:- Create or incorporate vector illustrations and icons to enhance your design.- Ensure\nthat these graphics are scalable without losing quality (vector format).\n12. Images and Photos:- If using images or photos, make sure they are high-resolution and properly sized for your\ndesign.- Edit and enhance images as needed.\n13. Testing and Proofing:- Review your graphic to check for any errors or inconsistencies.- Test how it appears on\ndifferent devices and screen sizes.\n\n-- 8 of 10 --\n\nWeb Content Management System\n14. Export and Save:- Export your graphic in the appropriate file format for its intended use (e.g., PNG, JPEG,\nSVG, PDF).- Maintain a high-resolution version for printing and a web-optimized version for online use.\n15. Optimization:- Optimize your graphic for web use by reducing file size without compromising quality. Tools\nlike Tiny PNG can help with this.\n16. Finalize and Share:- Save your project and make backup copies.- Share your graphic on the desired platform or\nuse it in your project.\n17. Feedback and Revisions:- If necessary, gather feedback from peers or stakeholders and make revisions\naccordingly.\n18. Learn and Improve:- Continue to learn and stay updated on design trends and software features to improve your\ngraphic design skills.\nRemember that practice and experimentation are key to improving your digital graphic design skills. Don't be\nafraid to try new techniques and styles to find what works best for your specific projects.\nAudio production and Editing\nAudio production and editing is the process of recording, manipulating, and refining audio content to achieve a\ndesired result. This can include tasks such as recording vocals or musical instruments, editing out mistakes or\nunwanted noise, adding effects, and mixing multiple audio tracks together. Whether you're a musician, podcaster,\nfilmmaker, or simply looking to improve your audio quality,\nHere are the key steps and concepts involved in audio production and editing:\n1. Recording : Is the process of capturing audio signals, while post-production involves altering and enhancing\naudio signals. The process starts with capturing the best possible sound to be included in the final product.\n Microphones: Select an appropriate microphone for your needs, considering factors like microphone type\n(condenser, dynamic, ribbon), directionality(cardioid, omnidirectional), and quality.\n Recording Environment: Choose a quiet and acoustically treated space to minimize background noise and\nunwanted reflections.\n Digital Audio Workstation (DAW): Use a DAW software (e.g., Pro Tools, LogicPro, Ableton Live, Adobe\nAudition) to record, edit and produce music.. DAWs can take audio input from your microphones, guitars\nand other instruments and record them as digital audio files to your computer’s hard drive.\n2. Editing: Audio editing is the process of altering recorded sound to create a desired effect. You may want to edit\naudio for many different reasons, such as to improve the quality of the recording, to remove unwanted noise or\nsounds, or to change the length or pitch of a particular audio clip.\n Trimming and Cutting: Remove unwanted sections of audio, such as mistakes, background noise, or\npauses.\n Arranging: Arrange and sequence audio clips or tracks to create a coherent structure.\n Volume and Gain: Adjust the volume levels of individual tracks to ensure a balanced mix.\n Fades and Crossfades: Smoothly transition between audio clips or tracks using fades and crossfades.\n Time Stretching and Pitch Correction: Modify the tempo and pitch of audio as needed.\n Noise Reduction: Use noise reduction tools to reduce background noise and unwanted artifacts.\n Equalization (EQ): Adjust the frequency balance of audio to enhance or attenuate specific frequencies.\n Compression: Apply compression to control dynamic range and make audio more consistent.\n\n-- 9 of 10 --\n\nWeb Content Management System\n Effects: Add audio effects such as reverb, delay, chorus, or distortion to shape the sound.\n Automation: Automate parameters like volume, panning, and effects over time for precise control.\n3. Mixing: Is used to combine multiple audio files into one. This can be used to create background music for a video\nor podcast. For example, you could mix several tracks to create an instrumental version of a song.\n Balancing: Adjust the relative levels of each track in the mix to achieve clarity and balance.\n Panning: Place each track in the stereo field to create a sense of space and separation.\n Spatial Effects: Use spatial effects like stereo widening and positioning to enhance the stereo image.\n Bussing: Group similar tracks together on buses for collective processing.\n Mastering: Apply final processing to the mix to optimize it for different playback systems.\n4. Exporting: Exporting tracks means saving them as separate audio files in a specific format, such as WAV, MP3,\nor AIFF. You can export individual tracks or groups of tracks, depending on your needs. Ensure the exported audio\nmeets industry-standard loudness levels and quality standards.\n- Choose the appropriate file format (e.g., WAV, MP3) and settings for your intended use (e.g., CD, online streaming,\npodcast).\n mp3: Low quality audio resolution with a small file size. Universally accepted by all devices.\n wav: Highest quality audio file with a much larger file size\n Audio Interchange File Format (AIFF) is an audio file format standard used for storing sound data for\npersonal computers and other electronic audio devices.\n5. Collaboration: Involves creating new content based on a client's brief, personal ideas, or by iterating existing\naudio content. They help shape and elevate an artist's vision, enhancing the potential of a track.\n- Share audio files or project files with collaborators, if applicable.\n- Maintain organized project files with proper labelling and documentation.\n6. Continual Improvement:\n- Keep learning and experimenting with new techniques and tools to enhance your audio production and editing\nskills.\n- Seek feedback from peers or mentors to refine your work.\nRemember that audio production and editing is both an art and a technical skill, and practice plays a crucial role in\nachieving high-quality results. Patience and attention to detail are key as you refine your audio projects\n\n-- 10 of 10 --",
+      "createdAt": "2026-08-21T23:49:58.861Z"
+    },
+    {
+      "id": "top_wh6nj71_mt33ix22",
+      "classroomId": "cls_nievh34_mt33h39o",
+      "teacherId": "usr_lky6pc1_mt33g3sg",
+      "teacherName": "pran",
+      "title": "evs",
+      "content": "Classroom study material attached below.",
+      "attachmentUrl": "/uploads/file_yd0jxuj_mt33iulj_evs_ans.pdf",
+      "attachmentName": "evs ans.pdf",
+      "pdfFileName": "evs ans.pdf",
+      "pdfText": "-- 1 of 23 --\n\n\n\n-- 2 of 23 --\n\n\n\n-- 3 of 23 --\n\n\n\n-- 4 of 23 --\n\n\n\n-- 5 of 23 --\n\n\n\n-- 6 of 23 --\n\n\n\n-- 7 of 23 --\n\n\n\n-- 8 of 23 --\n\n\n\n-- 9 of 23 --\n\n\n\n-- 10 of 23 --\n\n\n\n-- 11 of 23 --\n\n\n\n-- 12 of 23 --\n\n\n\n-- 13 of 23 --\n\n\n\n-- 14 of 23 --\n\n\n\n-- 15 of 23 --\n\n\n\n-- 16 of 23 --\n\n\n\n-- 17 of 23 --\n\n\n\n-- 18 of 23 --\n\n\n\n-- 19 of 23 --\n\n\n\n-- 20 of 23 --\n\n\n\n-- 21 of 23 --\n\n\n\n-- 22 of 23 --\n\n\n\n-- 23 of 23 --",
+      "createdAt": "2026-08-21T15:20:17.882Z"
+    },
+    {
+      "id": "top_p0li805_mt2s82in",
+      "classroomId": "cls_101",
+      "teacherId": "usr_teacher_1",
+      "teacherName": "Prof. Sarah Jenkins",
+      "title": "kannada topic",
+      "content": "Classroom study material attached below.",
+      "attachmentUrl": "/uploads/file_a08c7gp_mt2s8298_kannada_pdf.pdf",
+      "attachmentName": "kannada pdf.pdf",
+      "pdfFileName": "kannada pdf.pdf",
+      "pdfText": "ಭವಿ ಷ್ಯ ದ ಸಾ\u0000ಟ್ \u0000 ನಗರಗಳು\nಭವಿ ಷ್ಯ ದ ಸಾ\u0000ಟ್ \u0000 ನಗರಗಳು ಆಧುನಿ ಕ ತಂತ್ರ \u0000ಾನವನು್ನ ಬಳಸಿ ಕೆ ೂಂಡು ಜನರ \u0000ೕವನವನು್ನ ಹೆ ಚು\u0000 ಸುಲಭ, ಸುರಕ್ಷಿ ತ ಮತು್ತ\nಪರಿ ಸರ ಸೆ್ನ ೕಹಿ ಯಾಗಿ ಸುವ ನಗರಗಳಾಗಿ ವೆ . ಕೃತಕ ಬುದಿ \u0000\t ಮತೆ್ತ , ಇಂಟನೆ \u0000ಟ್ ಆಫ್\t ಥಿ\t ಂ\u0000\u0000 (IoT), ಸ್ವ ಯಂಚಾಲಿ ತ ವಾಹನಗಳು\nಮತು್ತ ನವಿ ೕಕರಿ ಸಬಹುದಾದ ಶ\u0000್ತಯಂತಹ ತಂತ್ರ \u0000ಾನಗಳು ಇಂತಹ ನಗರಗಳ ಅಭಿ ವೃದಿ \u0000\t ಯಲಿ್ಲ ಪ್ರ ಮುಖ ಪಾತ್ರ ವಹಿ ಸುತ್ತವೆ .\nಸಾ\u0000ಟ್ \u0000 ನಗರಗಳಲಿ್ಲ ಸಂಚಾರ ವ್ಯ ವಸೆ \u0000 ಯನು್ನ ತಂತ್ರ \u0000ಾನದ ಮೂಲಕ ನಿ ಯಂ\u0000್ರ ಸಲಾಗುತ್ತದೆ . ಸಾ\u0000ಟ್ \u0000 ಟಾ್ರಫಿಕ್\t ಸಿ\t \tಗ್ನಲ್ ಗಳು\nವಾಹನಗಳ ಸಂಖೆ್ಯ ಗೆ ಅನುಗುಣವಾಗಿ ಕಾಯ\u0000ನಿ ವ\u0000ಹಿ ಸುವುದರಿ ಂದ ಸಂಚಾರ ದಟ್ಟ ಣೆ ಕಡಿಮೆ ಯಾಗಬಹುದು. ವಿ ದು್ಯತ್ ಬಸ್ ಗಳು\nಮತು್ತ ಎಲೆ \u0000\u0000ಕ್ ವಾಹನಗಳ ಬಳಕೆಯಿ ಂದ ವಾಯುಮಾಲಿ ನ್ಯ ವನು್ನ ಕಡಿಮೆ \tಮಾಡಲು ಸಾಧ್ಯ ವಾಗುತ್ತದೆ .\n ನಿ\n\tೕರಿ ನ ಬಳಕೆ , ವಿ ದು್ಯತ್ ಪೂರೆ ೖಕೆ ಮತು್ತ ಕಸದ ನಿ ವ\u0000ಹಣೆ ಯನೂ್ನ ಸಾ\u0000ಟ್ \u0000 ವ್ಯ ವಸೆ \u0000 ಗಳ ಮೂಲಕ ಪರಿ ಣಾಮಕಾರಿ ಯಾಗಿ\n ನಿ\t\nವ\u0000ಹಿ ಸಬಹುದು. ಸೌ ರಶ\u0000್ತ ಮತು್ತ ಇತರ ನವಿ ೕಕರಿ ಸಬಹುದಾದ ಶ\u0000್ತಯ ಮೂಲಗಳನು್ನ ಬಳಸುವುದರಿ ಂದ ಪರಿ ಸರದ ಮೆ ೕಲಿ ನ\nಒತ್ತಡ ಕಡಿಮೆ ಯಾಗುತ್ತದೆ .\nಆದರೆ ಸಾ\u0000ಟ್ \u0000 ನಗರಗಳ ಅಭಿ ವೃದಿ \u0000\t ಯಲಿ್ಲ ಗೌ ಪ್ಯ ತೆ , ಸೆ ೖಬರ್ ಸುರಕ್ಷ ತೆ ಮತು್ತ ತಂತ್ರ \u0000ಾನಕೆ \u0000 ಎಲ್ಲರಿ ಗೂ ಸಮಾನ ಪ್ರ ವೆ ೕಶ ಎಂಬ\nಸಮಸೆ್ಯ ಗಳನೂ್ನ ಗಮನಿ ಸಬೆ ೕಕು. ತಂತ್ರ \u0000ಾನವನು್ನ ಬಳಸುವುದಷೆ್ಟ ೕ ಸಾಕಾಗುವುದಿ ಲ್ಲ; ಅದು ಜನರ ಅಗತ್ಯ ಗಳಿ ಗೆ\nಅನುಗುಣವಾಗಿ ರಬೆ ೕಕು.\nಒ\u0000್ಟ ನಲಿ್ಲ , ಸರಿ ಯಾದ \u0000ೕಜನೆ ಮತು್ತ ಜವಾಬಾ\u0000ರಿ ಯುತ ತಂತ್ರ \u0000ಾನ ಬಳಕೆ ಯ ಮೂಲಕ ಭವಿ ಷ್ಯ ದ ಸಾ\u0000ಟ್ \u0000 ನಗರಗಳು ಹೆ ಚು\u0000\nಸುಸಿ \u0000\t ರ, ಸುರಕ್ಷಿ ತ ಮತು್ತ ಉತ್ತಮ \u0000ೕವನಮಟ್ಟ ವನು್ನ ಒದಗಿ ಸುವ ನಗರಗಳಾಗಬಹುದು.\n\n-- 1 of 1 --",
+      "createdAt": "2026-08-21T10:03:55.967Z"
+    },
+    {
+      "id": "top_j0vb91x_mssfrrp1",
+      "classroomId": "cls_rppjqsg_mssfrctr",
+      "teacherId": "usr_iimhzlx_mssfqs3g",
+      "teacherName": "jalaja",
+      "title": "R u1.pdf",
+      "content": "Classroom PDF study notes shared by teacher.",
+      "attachmentUrl": "/uploads/file_2zyapcf_mssfrrp0_R_u1.pdf",
+      "attachmentName": "R u1.pdf",
+      "pdfText": "\n\n-- 1 of 13 --\n\n\n\n-- 2 of 13 --\n\n\n\n-- 3 of 13 --\n\n\n\n-- 4 of 13 --\n\n\n\n-- 5 of 13 --\n\n\n\n-- 6 of 13 --\n\n\n\n-- 7 of 13 --\n\n\n\n-- 8 of 13 --\n\n\n\n-- 9 of 13 --\n\n\n\n-- 10 of 13 --\n\n\n\n-- 11 of 13 --\n\n\n\n-- 12 of 13 --\n\n\n\n-- 13 of 13 --\n\n",
+      "createdAt": "2026-08-14T04:17:38.293Z"
+    },
+    {
+      "id": "top_101",
+      "classroomId": "cls_101",
+      "teacherId": "usr_teacher_1",
+      "teacherName": "Prof. Sarah Jenkins",
+      "title": "Introduction to Control Flow & Functions",
+      "content": "Welcome class! Please review key concepts on conditionals, loops, and function signatures. We will cover recursion next week.",
+      "createdAt": "2026-08-12T04:15:50.682Z"
+    }
+  ],
+  "assignments": [
+    {
+      "id": "asg_cylv4x9_mt33mnuc",
+      "classroomId": "cls_nievh34_mt33h39o",
+      "classroomName": "dbms",
+      "teacherId": "usr_lky6pc1_mt33g3sg",
+      "title": "evs",
+      "description": "submit",
+      "attachmentUrl": null,
+      "attachmentName": null,
+      "availableAt": "2026-08-20T20:52:00.000Z",
+      "dueAt": "2026-08-23T20:53:00.000Z",
+      "createdAt": "2026-08-21T15:23:12.564Z"
+    },
+    {
+      "id": "asg_lym29sz_mssfss6p",
+      "classroomId": "cls_rppjqsg_mssfrctr",
+      "classroomName": "C Prgm",
+      "teacherId": "usr_iimhzlx_mssfqs3g",
+      "title": "Assignment",
+      "description": "submit assignment today",
+      "availableAt": "2026-08-13T09:48:00.000Z",
+      "dueAt": "2026-08-15T09:48:00.000Z",
+      "createdAt": "2026-08-14T04:18:25.585Z"
+    },
+    {
+      "id": "asg_101",
+      "classroomId": "cls_101",
+      "classroomName": "AP Computer Science & Python",
+      "teacherId": "usr_teacher_1",
+      "title": "Python Recursion & Algorithmic Practice",
+      "description": "Implement fibonacci and binary search recursively in Python. Include output screenshots and time complexity analysis.",
+      "availableAt": "2026-08-13T23:15:50.682Z",
+      "dueAt": "2026-08-17T04:15:50.682Z",
+      "createdAt": "2026-08-13T22:15:50.682Z"
+    }
+  ],
+  "submissions": [
+    {
+      "id": "sub_n9swqow_mt33tuq0",
+      "assignmentId": "asg_cylv4x9_mt33mnuc",
+      "classroomId": "cls_nievh34_mt33h39o",
+      "studentId": "usr_5kdoq6l_mt2ryzo4",
+      "studentName": "nikhil",
+      "studentEmail": "nikhilaraksali@gmail.com",
+      "content": "",
+      "fileUrl": "/uploads/sub_pdf_xz54w60_mt33tuq0_kannada_pdf.pdf",
+      "fileName": "kannada pdf.pdf",
+      "submittedAt": "2026-08-21T15:28:48.072Z"
+    }
+  ],
+  "meetings": [],
+  "tutorSessions": [],
+  "quizzes": [
+    {
+      "id": "quiz_ryhpskf_mt3mcwrk",
+      "studentId": "usr_student_1",
+      "subject": "Python Loops",
+      "difficulty": "easy",
+      "questionCount": 2,
+      "questions": [
+        {
+          "question": "Which keyword is used to create a loop that repeats a block of code a specific number of times in Python?",
+          "options": [
+            "for",
+            "repeat",
+            "loop",
+            "do"
+          ],
+          "answerIndex": 0,
+          "explanation": "The 'for' keyword is the standard way to iterate over a sequence or a range of numbers in Python."
+        },
+        {
+          "question": "What is the output of the code: 'for i in range(2): print(i)'?",
+          "options": [
+            "1 2",
+            "0 1",
+            "0 1 2",
+            "1 2 3"
+          ],
+          "answerIndex": 1,
+          "explanation": "The range(2) function generates numbers starting from 0 up to, but not including, 2. Therefore, it produces 0 and 1."
+        }
+      ],
+      "createdAt": "2026-08-22T00:07:30.272Z"
+    },
+    {
+      "id": "quiz_8ktsry2_mt3mcpxc",
+      "studentId": "usr_student_1",
+      "subject": "Python Loops",
+      "difficulty": "easy",
+      "questionCount": 3,
+      "questions": [
+        {
+          "question": "Which keyword is used to start a 'for' loop in Python?",
+          "options": [
+            "repeat",
+            "for",
+            "loop",
+            "iterate"
+          ],
+          "answerIndex": 1,
+          "explanation": "In Python, the 'for' keyword is used to iterate over a sequence (like a list, tuple, or string)."
+        },
+        {
+          "question": "What is the output of the following code: for i in range(3): print(i)?",
+          "options": [
+            "1 2 3",
+            "0 1 2 3",
+            "0 1 2",
+            "1 2"
+          ],
+          "answerIndex": 2,
+          "explanation": "The range(3) function generates numbers starting from 0 up to, but not including, 3."
+        },
+        {
+          "question": "Which loop is best used when you want to repeat a block of code as long as a condition is true?",
+          "options": [
+            "for loop",
+            "while loop",
+            "do-while loop",
+            "if loop"
+          ],
+          "answerIndex": 1,
+          "explanation": "A 'while' loop repeatedly executes a target statement as long as a given condition remains true."
+        }
+      ],
+      "createdAt": "2026-08-22T00:07:21.408Z"
+    },
+    {
+      "id": "quiz_juyt06e_mt35jxoh",
+      "studentId": "usr_1m00j30_mt34b56n",
+      "subject": "evs - Document structure",
+      "difficulty": "medium",
+      "questionCount": 5,
+      "questions": [
+        {
+          "question": "Based on the provided document content, what is the total number of pages indicated?",
+          "options": [
+            "10",
+            "23",
+            "5",
+            "1"
+          ],
+          "answerIndex": 1,
+          "explanation": "The document content explicitly lists markers up to '-- 23 of 23 --', indicating a total of 23 pages."
+        },
+        {
+          "question": "What is the primary subject matter contained within the provided text?",
+          "options": [
+            "EVS Document structure",
+            "Software engineering principles",
+            "Historical timelines",
+            "The provided text is empty and contains no subject matter"
+          ],
+          "answerIndex": 3,
+          "explanation": "The provided content consists only of page markers and contains no actual text or information regarding document structure."
+        },
+        {
+          "question": "Which of the following best describes the content provided in the source text?",
+          "options": [
+            "A detailed guide on EVS",
+            "A series of page markers",
+            "A technical specification document",
+            "A summary of document structure rules"
+          ],
+          "answerIndex": 1,
+          "explanation": "The source text provided is strictly a sequence of page markers (e.g., '-- 1 of 23 --') with no other content."
+        },
+        {
+          "question": "Can any information regarding 'EVS - Document structure' be extracted from the provided text?",
+          "options": [
+            "Yes, it is explained in detail",
+            "Yes, it is briefly mentioned",
+            "No, the text is empty of content",
+            "Only the title is provided"
+          ],
+          "answerIndex": 2,
+          "explanation": "The provided text contains no information about EVS or document structure; it only contains page indicators."
+        },
+        {
+          "question": "What is the format of the page indicators found in the provided text?",
+          "options": [
+            "Page X of Y",
+            "-- X of Y --",
+            "[X/Y]",
+            "Page: X/Y"
+          ],
+          "answerIndex": 1,
+          "explanation": "The indicators follow the format '-- X of Y --', where X is the current page and Y is the total number of pages."
+        }
+      ],
+      "createdAt": "2026-08-21T16:17:04.577Z"
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "fcard_5bkptpn_mt3md347",
+      "studentId": "usr_student_1",
+      "topic": "Data Structures",
+      "cards": [
+        {
+          "id": "card_0_1787357258503",
+          "front": "What is the primary difference between a Stack and a Queue?",
+          "back": "A Stack follows LIFO (Last-In, First-Out) order, where the last element added is the first removed. A Queue follows FIFO (First-In, First-Out) order, where the first element added is the first removed.",
+          "mastered": false
+        },
+        {
+          "id": "card_1_1787357258503",
+          "front": "What is the primary advantage of a Linked List over an Array?",
+          "back": "Linked Lists allow for dynamic memory allocation and efficient insertions or deletions at any position (O(1) time complexity if the node is known), whereas Arrays have a fixed size and require shifting elements for insertions or deletions.",
+          "mastered": false
+        }
+      ],
+      "createdAt": "2026-08-22T00:07:38.503Z"
+    },
+    {
+      "id": "fcard_3uhu5am_mt3mcs95",
+      "studentId": "usr_student_1",
+      "topic": "Operating Systems",
+      "cards": [
+        {
+          "id": "card_0_1787357244425",
+          "front": "What is the primary purpose of an operating system's kernel?",
+          "back": "The kernel is the core component that manages system resources, facilitates communication between hardware and software, and handles process management, memory management, and device drivers.",
+          "mastered": false
+        },
+        {
+          "id": "card_1_1787357244425",
+          "front": "What is the difference between a process and a thread?",
+          "back": "A process is an independent program in execution with its own memory space, while a thread is the smallest unit of execution within a process that shares the process's memory space and resources.",
+          "mastered": false
+        },
+        {
+          "id": "card_2_1787357244425",
+          "front": "What is virtual memory and why is it used?",
+          "back": "Virtual memory is a memory management technique that provides an idealized abstraction of storage, allowing the system to run programs larger than physical RAM by swapping data between RAM and disk storage.",
+          "mastered": false
+        }
+      ],
+      "createdAt": "2026-08-22T00:07:24.425Z"
+    },
+    {
+      "id": "fcard_wc3xavh_mt34fi8r",
+      "studentId": "usr_1m00j30_mt34b56n",
+      "topic": "php",
+      "cards": [
+        {
+          "id": "card_0_1787327138331",
+          "front": "What does PHP stand for?",
+          "back": "PHP: Hypertext Preprocessor.",
+          "mastered": false
+        },
+        {
+          "id": "card_1_1787327138331",
+          "front": "How do you start a PHP code block?",
+          "back": "Using the opening tag <?php.",
+          "mastered": false
+        },
+        {
+          "id": "card_2_1787327138331",
+          "front": "What symbol must every PHP statement end with?",
+          "back": "A semicolon (;).",
+          "mastered": false
+        },
+        {
+          "id": "card_3_1787327138331",
+          "front": "How do you declare a variable in PHP?",
+          "back": "By using the dollar sign ($) followed by the variable name (e.g., $myVariable).",
+          "mastered": false
+        }
+      ],
+      "createdAt": "2026-08-21T15:45:38.331Z"
+    },
+    {
+      "id": "fcard_g20t8vn_mt345zby",
+      "studentId": "usr_5kdoq6l_mt2ryzo4",
+      "topic": "dbms",
+      "cards": [
+        {
+          "id": "card_0_1787326693918",
+          "front": "What is a Database Management System (DBMS)?",
+          "back": "A DBMS is software that enables users to define, create, maintain, and control access to a database. It serves as an intermediary interface between end-users or applications and the physical database, ensuring data remains organized, consistent, and secure.",
+          "mastered": false
+        },
+        {
+          "id": "card_1_1787326693918",
+          "front": "What do the ACID properties stand for in transaction management?",
+          "back": "ACID stands for:\n• Atomicity: Entire transaction completes or none of it does.\n• Consistency: Database moves from one valid state to another, maintaining constraints.\n• Isolation: Concurrent transactions execute without interfering with each other.\n• Durability: Once committed, changes are permanent even after system crashes.",
+          "mastered": false
+        },
+        {
+          "id": "card_2_1787326693918",
+          "front": "What is database normalization and why is it important?",
+          "back": "Normalization is the systematic process of organizing data in a relational database to minimize data redundancy and eliminate undesirable anomalies (insertion, update, and deletion anomalies) by breaking tables down into smaller, well-structured relationships.",
+          "mastered": false
+        },
+        {
+          "id": "card_3_1787326693918",
+          "front": "What is the difference between a Primary Key and a Foreign Key?",
+          "back": "A Primary Key uniquely identifies each record in a table and cannot contain NULL values. A Foreign Key is a field (or collection of fields) in one table that refers to the Primary Key of another table, establishing a relationship and enforcing referential integrity.",
+          "mastered": false
+        },
+        {
+          "id": "card_4_1787326693918",
+          "front": "What are the key differences between SQL (Relational) and NoSQL (Non-Relational) databases?",
+          "back": "SQL databases are structured, table-based, use predefined schemas, emphasize ACID compliance, and scale vertically. NoSQL databases are schema-flexible (document, key-value, graph, column-family), emphasize high scalability and performance, and scale horizontally across distributed systems.",
+          "mastered": false
+        },
+        {
+          "id": "card_5_1787326693918",
+          "front": "What is database indexing and what is its primary trade-off?",
+          "back": "An index is a data structure (commonly a B-Tree or Hash index) that significantly speeds up data retrieval (SELECT queries). The primary trade-off is that it consumes additional storage space and slows down write operations (INSERT, UPDATE, DELETE) because the index must be updated alongside the table.",
+          "mastered": false
+        },
+        {
+          "id": "card_6_1787326693918",
+          "front": "What are the standard transaction isolation levels from lowest to highest?",
+          "back": "1. Read Uncommitted (allows dirty reads)\n2. Read Committed (prevents dirty reads)\n3. Repeatable Read (prevents non-repeatable reads)\n4. Serializable (highest isolation; prevents phantom reads by ensuring transactions execute as if sequentially)",
+          "mastered": false
+        },
+        {
+          "id": "card_7_1787326693918",
+          "front": "What is a View in a relational DBMS and what purpose does it serve?",
+          "back": "A View is a virtual table based on the result-set of a pre-written SQL query. It does not store physical data itself. Views simplify complex queries, provide an abstraction layer over database schema, and enhance security by restricting direct user access to underlying tables.",
+          "mastered": false
+        }
+      ],
+      "createdAt": "2026-08-21T15:38:13.918Z"
+    },
+    {
+      "id": "fcard_seqt0sy_mt2sak89",
+      "studentId": "usr_teacher_1",
+      "topic": "kannada topic - Chapter 1: ಸ್ಮಾರ್ಟ್ ನಗರಗಳ ಪರಿಚಯ ಮತ್ತು ತಂತ್ರಜ್ಞಾನ",
+      "cards": [
+        {
+          "id": "card_0_1787306752233",
+          "front": "ಸ್ಮಾರ್ಟ್ ನಗರಗಳು ಎಂದರೇನು?",
+          "back": "ಸ್ಮಾರ್ಟ್ ನಗರಗಳು ಆಧುನಿಕ ತಂತ್ರಜ್ಞಾನವನ್ನು ಬಳಸಿಕೊಂಡು ಜನರ ಜೀವನವನ್ನು ಹೆಚ್ಚು ಸುಲಭ, ಸುರಕ್ಷಿತ ಮತ್ತು ಪರಿಸರ ಸ್ನೇಹಿಯಾಗಿ ಮಾಡುವ ನಗರಗಳಾಗಿವೆ.",
+          "mastered": false
+        },
+        {
+          "id": "card_1_1787306752233",
+          "front": "ಸ್ಮಾರ್ಟ್ ನಗರಗಳ ಅಭಿವೃದ್ಧಿಯಲ್ಲಿ ಪ್ರಮುಖ ಪಾತ್ರ ವಹಿಸುವ ತಂತ್ರಜ್ಞಾನಗಳು ಯಾವುವು?",
+          "back": "ಕೃತಕ ಬುದ್ಧಿಮತ್ತೆ (AI), ಇಂಟರ್ನೆಟ್ ಆಫ್ ಥಿಂಗ್ಸ್ (IoT), ಸ್ವಯಂಚಾಲಿತ ವಾಹನಗಳು ಮತ್ತು ನವೀಕರಿಸಬಹುದಾದ ಶಕ್ತಿ ಮೂಲಗಳು ಸ್ಮಾರ್ಟ್ ನಗರಗಳ ಅಭಿವೃದ್ಧಿಯಲ್ಲಿ ಪ್ರಮುಖ ಪಾತ್ರ ವಹಿಸುತ್ತವೆ.",
+          "mastered": false
+        },
+        {
+          "id": "card_2_1787306752233",
+          "front": "ಸ್ಮಾರ್ಟ್ ಟ್ರಾಫಿಕ್ ಸಿಗ್ನಲ್‌ಗಳು ಸಂಚಾರ ದಟ್ಟಣೆಯನ್ನು ಹೇಗೆ ಕಡಿಮೆ ಮಾಡುತ್ತವೆ?",
+          "back": "ಸ್ಮಾರ್ಟ್ ಟ್ರಾಫಿಕ್ ಸಿಗ್ನಲ್‌ಗಳು ರಸ್ತೆಯಲ್ಲಿರುವ ವಾಹನಗಳ ಸಂಖ್ಯೆಗೆ ಅನುಗುಣವಾಗಿ ಕಾರ್ಯನಿರ್ವಹಿಸುವುದರಿಂದ ಸಂಚಾರ ದಟ್ಟಣೆಯನ್ನು ಕಡಿಮೆ ಮಾಡಲು ಸಾಧ್ಯವಾಗುತ್ತದೆ.",
+          "mastered": false
+        },
+        {
+          "id": "card_3_1787306752233",
+          "front": "ಸ್ಮಾರ್ಟ್ ನಗರಗಳಲ್ಲಿ ವಾಯುಮಾಲಿನ್ಯವನ್ನು ಕಡಿಮೆ ಮಾಡಲು ಯಾವ ಕ್ರಮಗಳನ್ನು ಕೈಗೊಳ್ಳಲಾಗುತ್ತದೆ?",
+          "back": "ವಿದ್ಯುತ್ ಬಸ್‌ಗಳು ಮತ್ತು ಎಲೆಕ್ಟ್ರಿಕ್ ವಾಹನಗಳ ಬಳಕೆಯನ್ನು ಉತ್ತೇಜಿಸುವ ಮೂಲಕ ವಾಯುಮಾಲಿನ್ಯವನ್ನು ಕಡಿಮೆ ಮಾಡಲು ಸಾಧ್ಯವಾಗುತ್ತದೆ.",
+          "mastered": false
+        },
+        {
+          "id": "card_4_1787306752233",
+          "front": "ಸ್ಮಾರ್ಟ್ ನಗರಗಳ ಅಭಿವೃದ್ಧಿಯಲ್ಲಿ ಎದುರಾಗುವ ಸವಾಲುಗಳು ಯಾವುವು?",
+          "back": "ಸ್ಮಾರ್ಟ್ ನಗರಗಳ ಅಭಿವೃದ್ಧಿಯಲ್ಲಿ ಗೌಪ್ಯತೆ (Privacy), ಸೈಬರ್ ಸುರಕ್ಷತೆ ಮತ್ತು ತಂತ್ರಜ್ಞಾನಕ್ಕೆ ಎಲ್ಲರಿಗೂ ಸಮಾನ ಪ್ರವೇಶ ಸಿಗದಿರುವುದು ಪ್ರಮುಖ ಸವಾಲುಗಳಾಗಿವೆ.",
+          "mastered": false
+        },
+        {
+          "id": "card_5_1787306752233",
+          "front": "ಸ್ಮಾರ್ಟ್ ವ್ಯವಸ್ಥೆಗಳ ಮೂಲಕ ಯಾವ ಮೂಲಭೂತ ಸೌಕರ್ಯಗಳನ್ನು ಪರಿಣಾಮಕಾರಿಯಾಗಿ ನಿರ್ವಹಿಸಬಹುದು?",
+          "back": "ಸ್ಮಾರ್ಟ್ ವ್ಯವಸ್ಥೆಗಳ ಮೂಲಕ ನೀರಿನ ಬಳಕೆ, ವಿದ್ಯುತ್ ಪೂರೈಕೆ ಮತ್ತು ಕಸದ ನಿರ್ವಹಣೆಯನ್ನು ಪರಿಣಾಮಕಾರಿಯಾಗಿ ನಿರ್ವಹಿಸಬಹುದು.",
+          "mastered": false
+        }
+      ],
+      "createdAt": "2026-08-21T10:05:52.233Z"
+    }
+  ],
+  "studyPlans": [],
+  "materials": [
+    {
+      "id": "mat_kz962i3_mt3md5gd",
+      "studentId": "usr_student_1",
+      "title": "Machine Learning",
+      "summary": "This study document \"Machine Learning\" covers key subject principles and reference material.\n\nCore Overview: Supervised learning uses labeled data.",
+      "notes": [
+        "Document focuses on essential concepts of Machine Learning.",
+        "Includes core formulas, definitions, and operational workflows.",
+        "Emphasizes systematic understanding and practical problem solving.",
+        "Recommended for revision prior to examinations and assignments.",
+        "Review accompanying classroom materials for additional examples."
+      ],
+      "keyConcepts": [
+        {
+          "term": "Machine Learning",
+          "definition": "The primary domain and subject matter outlined in this document."
+        },
+        {
+          "term": "Key Principles",
+          "definition": "Foundational rules, definitions, and standards referenced in the study material."
+        }
+      ],
+      "createdAt": "2026-08-22T00:07:41.533Z"
+    },
+    {
+      "id": "mat_07cg1b8_mt2s6o7i",
+      "studentId": "usr_5kdoq6l_mt2ryzo4",
+      "title": "kannada pdf.pdf",
+      "summary": "Future smart cities are designed to enhance urban living by leveraging cutting-edge technological advancements such as Artificial Intelligence (AI), the Internet of Things (IoT), autonomous vehicles, and renewable energy. These integrated technologies work collaboratively to build urban environments that are more convenient, secure, and environmentally sustainable, directly addressing the modern challenges of urban population growth.\n\nTechnological integration plays a pivotal role in public utilities and transportation. Smart traffic management systems dynamically adjust signals based on real-time vehicle flow to minimize congestion, while the widespread adoption of electric buses and vehicles reduces air pollution. Furthermore, smart municipal grids optimize the distribution of water, ensure stable electricity supply, and streamline waste management, substantially decreasing environmental strain through the use of clean power sources like solar energy.\n\nHowever, building future smart cities also introduces critical challenges that demand vigilant attention, including data privacy risks, cybersecurity threats, and the necessity of ensuring equitable digital access for all citizens. Technology must not be implemented merely for its own sake; rather, long-term success relies on responsible adoption and strategic planning that directly aligns with the fundamental needs and welfare of the people.",
+      "notes": [
+        "Core Technologies: Integration of Artificial Intelligence (AI), IoT, autonomous transit, and renewable energy forms the backbone of modern smart cities.",
+        "Smart Urban Mobility: Dynamic traffic signals reduce road congestion based on real-time flow, while electric buses and EVs drastically lower carbon emissions.",
+        "Resource Optimization: Automated systems efficiently monitor and regulate water distribution, electricity supply, and municipal solid waste management.",
+        "Environmental Sustainability: Transitioning to solar and other renewable energy sources significantly diminishes environmental stress and urban carbon footprints.",
+        "Governance Challenges: Ensuring robust cybersecurity, safeguarding citizen privacy, and bridging the digital divide are essential prerequisites for successful smart city deployment."
+      ],
+      "keyConcepts": [
+        {
+          "term": "Smart Cities (ಸ್ಮಾರ್ಟ್ ನಗರಗಳು)",
+          "definition": "Urban areas that leverage advanced digital technologies and data-driven systems to optimize public infrastructure, reduce environmental impact, and improve overall quality of life."
+        },
+        {
+          "term": "Internet of Things / IoT (ಇಂಟರ್ನೆಟ್ ಆಫ್ ಥಿಂಗ್ಸ್)",
+          "definition": "A network of interconnected physical devices, sensors, and meters that collect and communicate real-time data to automate and manage city utilities and services."
+        },
+        {
+          "term": "Artificial Intelligence / AI (ಕೃತಕ ಬುದ್ಧಿಮತ್ತೆ)",
+          "definition": "Computational systems that analyze vast amounts of urban data to make intelligent, automated decisions in areas like traffic control, energy distribution, and resource management."
+        },
+        {
+          "term": "Renewable Energy (ನವೀಕರಿಸಬಹುದಾದ ಶಕ್ತಿ)",
+          "definition": "Naturally replenishing and clean energy sources, such as solar power, used to power municipal infrastructure sustainably."
+        },
+        {
+          "term": "Cybersecurity & Privacy (ಸೈಬರ್ ಸುರಕ್ಷತೆ ಮತ್ತು ಗೌಪ್ಯತೆ)",
+          "definition": "Critical protective measures and protocols implemented to safeguard digital municipal infrastructure, public networks, and personal citizen data against unauthorized access and cyber threats."
+        }
+      ],
+      "createdAt": "2026-08-21T10:02:50.766Z"
+    }
+  ],
+  "feedback": [],
+  "notifications": [
+    {
+      "id": "notif_ehfsi9f_mt3lqdhq",
+      "userId": "usr_1m00j30_mt34b56n",
+      "title": "New Class Topic Posted",
+      "message": "pran posted a new topic: \"Wcms\"",
+      "type": "topic",
+      "classroomId": "cls_nievh34_mt33h39o",
+      "isRead": false,
+      "createdAt": "2026-08-21T23:49:58.862Z"
+    },
+    {
+      "id": "notif_743u1pt_mt3lqdhq",
+      "userId": "usr_5kdoq6l_mt2ryzo4",
+      "title": "New Class Topic Posted",
+      "message": "pran posted a new topic: \"Wcms\"",
+      "type": "topic",
+      "classroomId": "cls_nievh34_mt33h39o",
+      "isRead": false,
+      "createdAt": "2026-08-21T23:49:58.862Z"
+    },
+    {
+      "id": "notif_y0bhr69_mt35isyl",
+      "userId": "usr_lky6pc1_mt33g3sg",
+      "title": "New Student Joined",
+      "message": "js joined your classroom \"dbms\".",
+      "type": "system",
+      "classroomId": "cls_nievh34_mt33h39o",
+      "isRead": true,
+      "createdAt": "2026-08-21T16:16:11.805Z"
+    },
+    {
+      "id": "notif_wykz2o0_mt35isyl",
+      "userId": "usr_1m00j30_mt34b56n",
+      "title": "Joined Classroom",
+      "message": "You successfully enrolled in dbms.",
+      "type": "system",
+      "classroomId": "cls_nievh34_mt33h39o",
+      "isRead": true,
+      "createdAt": "2026-08-21T16:16:11.805Z"
+    },
+    {
+      "id": "notif_hatx8wp_mt33tuq0",
+      "userId": "usr_lky6pc1_mt33g3sg",
+      "title": "New Student Submission",
+      "message": "nikhil submitted assignment: \"evs\"",
+      "type": "submission",
+      "classroomId": "cls_nievh34_mt33h39o",
+      "assignmentId": "asg_cylv4x9_mt33mnuc",
+      "isRead": true,
+      "createdAt": "2026-08-21T15:28:48.072Z"
+    },
+    {
+      "id": "notif_u2g024u_mt33n6il",
+      "userId": "usr_lky6pc1_mt33g3sg",
+      "title": "New Student Joined",
+      "message": "nikhil joined your classroom \"dbms\".",
+      "type": "system",
+      "classroomId": "cls_nievh34_mt33h39o",
+      "isRead": true,
+      "createdAt": "2026-08-21T15:23:36.765Z"
+    },
+    {
+      "id": "notif_tdx7piq_mt33n6il",
+      "userId": "usr_5kdoq6l_mt2ryzo4",
+      "title": "Joined Classroom",
+      "message": "You successfully enrolled in dbms.",
+      "type": "system",
+      "classroomId": "cls_nievh34_mt33h39o",
+      "isRead": false,
+      "createdAt": "2026-08-21T15:23:36.765Z"
+    },
+    {
+      "id": "notif_init_1",
+      "userId": "usr_student_1",
+      "title": "Welcome to AP Computer Science",
+      "message": "You have been enrolled in AP Computer Science & Python classroom.",
+      "type": "system",
+      "classroomId": "cls_101",
+      "isRead": false,
+      "createdAt": "2026-08-14T04:15:50.682Z"
+    }
+  ],
+  "progress": {
+    "usr_student_1": {
+      "studentId": "usr_student_1",
+      "quizzesTaken": 1,
+      "avgQuizScore": 85,
+      "completedAssignments": 0,
+      "totalAiInteractions": 8,
+      "flashcardsMastered": 8,
+      "lastActiveAt": "2026-08-22T00:07:54.146Z"
+    },
+    "usr_v3htjw3_mssftlye": {
+      "studentId": "usr_v3htjw3_mssftlye",
+      "quizzesTaken": 0,
+      "avgQuizScore": 0,
+      "completedAssignments": 0,
+      "totalAiInteractions": 0,
+      "flashcardsMastered": 0,
+      "lastActiveAt": "2026-08-14T04:19:04.166Z"
+    },
+    "usr_mt8zhja_mt2rm7tb": {
+      "studentId": "usr_mt8zhja_mt2rm7tb",
+      "quizzesTaken": 0,
+      "avgQuizScore": 0,
+      "completedAssignments": 0,
+      "totalAiInteractions": 0,
+      "flashcardsMastered": 0,
+      "lastActiveAt": "2026-08-21T09:46:56.399Z"
+    },
+    "usr_5kdoq6l_mt2ryzo4": {
+      "studentId": "usr_5kdoq6l_mt2ryzo4",
+      "quizzesTaken": 0,
+      "avgQuizScore": 0,
+      "completedAssignments": 1,
+      "totalAiInteractions": 7,
+      "flashcardsMastered": 0,
+      "lastActiveAt": "2026-08-21T23:43:59.564Z"
+    },
+    "usr_lky6pc1_mt33g3sg": {
+      "studentId": "usr_lky6pc1_mt33g3sg",
+      "quizzesTaken": 0,
+      "avgQuizScore": 0,
+      "completedAssignments": 0,
+      "totalAiInteractions": 2,
+      "flashcardsMastered": 0,
+      "lastActiveAt": "2026-08-21T23:50:18.308Z"
+    },
+    "usr_1m00j30_mt34b56n": {
+      "studentId": "usr_1m00j30_mt34b56n",
+      "quizzesTaken": 0,
+      "avgQuizScore": 0,
+      "completedAssignments": 0,
+      "totalAiInteractions": 31,
+      "flashcardsMastered": 0,
+      "lastActiveAt": "2026-08-22T00:19:45.689Z"
+    }
+  },
+  "metrics": {
+    "totalAiRequests": 55
+  }
+}
