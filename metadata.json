@@ -1,0 +1,6 @@
+{
+  "name": "AI Study Assistant",
+  "description": "Complete AI Study Assistant platform with classrooms, scheduled assignments, AI learning suite, and mobile app sync.",
+  "requestFramePermissions": ["camera", "microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,18 @@
+{
+  "name": "Scholar AI",
+  "short_name": "ScholarAI",
+  "description": "AI Study Assistant & Classroom Collaboration Platform",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0B0B0C",
+  "theme_color": "#0B0B0C",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "type": "image/svg+xml",
+      "sizes": "192x192 512x512",
+      "purpose": "any maskable"
+    }
+  ]
+}
